@@ -1,60 +1,14 @@
-<!DOCTYPE html>
-
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
-    <script src="gesture-detector.js"></script>
-    <script src="gesture-handler.js"></script>
-    
-    <style>
-      body {
-        overflow: hidden;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
   </head>
-
   <body>
-    <a-scene
-      arjs
-      embedded
-      renderer="logarithmicDepthBuffer: true;"
-      vr-mode-ui="enabled: false"
-      gesture-detector
-      id="scene"
-      loading-screen="enabled: true"
-    >
-      <a-assets>
-        <a-asset-item
-          id="pv1"
-          src="heart.gltf"
-        ></a-asset-item>
-      </a-assets>
-
-      <a-marker
-        preset="hiro"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
-        <a-entity
-          id="pv11"
-          gltf-model="#pv1"
-          position="0 0 0"
-          scale="1 1 1"
-          class="clickable"
-          gesture-handler
-          animation-mixer="clip :  KeyAction ; timeScale:2"
-          model-opacity="1"
-        >
-        </a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
+    <div id="app"></div>
+    <iframe  src="test.html" width="600" height="400" frameborder="0"></iframe>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
