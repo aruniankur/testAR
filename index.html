@@ -5,10 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+        <style>
+      #cell {
+        height: 80vh;
+        width: 80vw;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
-    <iframe  src="test.html" width="600" height="400" frameborder="0"></iframe>
+    <div id="cell">
+      <iframe
+        id="myIframe"
+        src="test.html"
+        title="video"
+        width="100%"
+        height="100%"
+      ></iframe>
+    </div>
+    <iframe  src="test.html" width="100% height="100%"  id="myIframe"></iframe>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
